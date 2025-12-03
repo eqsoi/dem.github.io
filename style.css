@@ -1,8 +1,57 @@
-body{
-	background-color: #d2b48c;
-	margin-left: 20%;
-	margin-right: 20%;
-	border: 2px dotted black;
-	padding: 10px 10px 10px 10px;
-	font-family: sans serif;
-    }
+/* Подключение шрифта Pudelinka */
+@font-face {
+  font-family: "Pudelinka";
+  src: url("Fonts/pudelinka.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff9f0; /* Светлый кремовый фон */
+  color: #2c1810;           /* Тёмно-коричневый текст — контраст! */
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Шрифт для цитаты */
+.quote {
+  font-family: "Pudelinka", cursive;
+  font-size: 24px;
+  color: #c1272d; /* Новогодний красный */
+  text-align: center;
+  margin: 30px 0;
+}
+
+/* Стиль кроссворда */
+.crossword {
+  border-collapse: collapse;
+  margin: 20px auto;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.crossword td {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Ссылки */
+a {
+  color: #d32f2f;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Заголовки */
+h1, h2 {
+  color: #1b5e20; /* Зелёный, как ёлка */
+}
