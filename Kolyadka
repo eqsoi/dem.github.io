@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Поздравление с Рождеством</title>
+  <style>
+    @font-face {
+      font-family: 'Pudelinka';
+      src: url('Pudelinka.ttf') format('truetype');
+    }
+    body {
+      font-family: 'Pudelinka', cursive;
+      background: #0c2b0c;
+      color: #f8e8a0;
+      text-align: center;
+      padding: 40px 20px;
+      margin: 0;
+      font-size: 36px;
+      line-height: 1.6;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    }
+    .title {
+      font-size: 56px;
+      margin-bottom: 20px;
+      color: #ffcc66;
+    }
+    .kolyadka {
+      margin: 30px auto;
+      max-width: 800px;
+    }
+    video {
+      max-width: 90%;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="title">Поздравление с рождеством</div>
+  
+  <div class="kolyadka">
+    <div style="font-size: 1.2em; margin-bottom: 16px;">КОЛЯДКА</div>
+    <p>
+      Под окном звезда горит,<br>
+      Снег на ветках серебрит.<br>
+      Пусть счастливым будет год —<br>
+      Смех, удача и доход!
+    </p>
+  </div>
+
+  <newTree.mp4>
+  <video controls>
+    <source src="newTree.mp4" type="video/mp4">
+  </video>
+
+</body>
+</html>
