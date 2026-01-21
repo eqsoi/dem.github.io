@@ -5,5 +5,7 @@
 ├── index.html
 ├── russian-crossword.html
 ├── style.css
-└── Icons/                   
-    └── free-icon-christmas-decorations-2445049.png  
+├── Fonts/                          ← добавить!
+│   └── pudelinka.ttf               ← добавить!
+└── Icons/
+    └── free-icon-christmas-decorations-2445049.png
