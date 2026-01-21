@@ -4,24 +4,26 @@
   src: url("Fonts/pudelinka.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap; /* чтобы текст не исчезал при загрузке */
 }
 
 /* Общие стили */
 body {
   font-family: Arial, sans-serif;
-  background-color: #fff9f0; /* Светлый кремовый фон */
-  color: #2c1810;           /* Тёмно-коричневый текст — контраст! */
+  background-color: #fff9f0;
+  color: #2c1810;
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
   line-height: 1.6;
 }
 
-/* Шрифт для цитаты */
-.quote {
+/* Шрифт для цитат и специальных блоков */
+.quote,
+.pudelinka {
   font-family: "Pudelinka", cursive;
   font-size: 24px;
-  color: #c1272d; /* Новогодний красный */
+  color: #c1272d;
   text-align: center;
   margin: 30px 0;
 }
@@ -53,5 +55,5 @@ a:hover {
 
 /* Заголовки */
 h1, h2 {
-  color: #1b5e20; /* Зелёный, как ёлка */
+  color: #1b5e20;
 }
