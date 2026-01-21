@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSA — учебный пример</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <style>
+        pre {
+            background: #f9f9f9;
+            padding: 12px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 14px;
+        }
+        .demo-box {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f0f8ff;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>21 января, 2026</h2>
+    <h3>Учебный пример шифрования RSA</h3>
+    <p>Алгоритм RSA — один из первых и самых известных методов асимметричного шифрования.</p>
+
+    <pre>
+1. Выбираем простые числа: p = 3, q = 5  
+2. n = p × q = 15  
+3. φ(n) = (p−1)(q−1) = 2 × 4 = 8  
+4. Выбираем e = 3 (взаимно простое с 8)  
+5. Находим d: (3 × d) mod 8 = 1 → d = 3  
+
+Ключи:  
+— Открытый: (n, e) = (15, 3)  
+— Закрытый: (n, d) = (15, 3)
+
+Пример:  
+Сообщение m = 2 (должно быть &lt; 15)  
+Шифрование: C = 2³ mod 15 = 8  
+Расшифровка: M = 8³ mod 15 = 512 mod 15 = 2 ✅
+    </pre>
+
+    <div class="demo-box">
+        <p><strong>Попробуйте сами:</strong> введите число от 1 до 14:</p>
+        <input type="number" id="m" min="1" max="14" value="2">
+        <button onclick="runDemo()">Зашифровать и расшифровать</button>
+        <p id="output" style="margin-top: 10px;"></p>
+    </div>
+
+    <script>
+        function runDemo() {
+            const m = parseInt(document.getElementById('m').value);
+            if (m < 1 || m >= 15 || isNaN(m)) {
+                document.getElementById('output').innerHTML = '❌ Введите число от 1 до 14.';
+                return;
+            }
+
+            const n = 15, e = 3, d = 3;
+            const C = (m ** e) % n;
+            const M = (C ** d) % n;
+
+            document.getElementById('output').innerHTML = 
+                `Исходное: ${m} → Шифр: ${C} → Расшифровано: ${M} ${
+                    M === m ? '✅' : '❌'
+                }`;
+        }
+    </script>
+
+    <p><a href="index.html">← Назад к блогу</a></p>
+
+</body>
+</html>
